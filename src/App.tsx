@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import "./App.css";
-import CardComponent from "./components/CardComponent";
-import NavbarComponent from "./components/NavbarComponent";
-import FooterComponent from "./components/FooterComponent";
+import CardComponent from "./components/Main/CardComponent";
+import NavbarComponent from "./components/Head/NavbarComponent";
+import FooterComponent from "./components/Footer/FooterComponent";
 import { Spinner } from "flowbite-react";
 import { Button, Modal } from "flowbite-react";
-import FormCreateComponent from "./components/FormCreateComponent";
+import FormCreateComponent from "./components/Main/FormCreateComponent";
+import CarouselComponent from "./components/Head/CarouselComponent";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Product = {
@@ -67,11 +68,12 @@ function App() {
 	return (
 		<>
 			<NavbarComponent />
+		<CarouselComponent/>
 			<main className="grid place-content-center">
-				<h1 className="text-4xl text-center mb-[50px]">
+				<h1 className="text-4xl ml-24 mb-[50px]">
 					All Product List
 				</h1>
-				<div className="grid place-content-center mb-[50px]">
+				<div className="ml-24 mb-[50px]">
 					<Button onClick={() => setOpenModal(true)}>
 						Create Product
 					</Button>

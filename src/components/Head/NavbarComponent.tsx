@@ -1,6 +1,6 @@
 import { Button, Navbar } from "flowbite-react";
 
-export default function NavbarComponent() {
+export default function NavbarCompo() {
 	return (
 		<Navbar className="" fluid rounded>
 			<Navbar.Brand href="https://flowbite-react.com">

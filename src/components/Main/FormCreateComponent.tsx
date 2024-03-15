@@ -9,7 +9,7 @@ type ErrorType = {
 };
 
 
-export default function FormCreateComponent({ getDataForm } :  any) {
+export default function FormCreateCompo({ getDataForm } :  any) {
 	const [title, setTitle] = useState("");
 	const [price, setPrice] = useState(0);
 	const [description, setDescription] = useState("");

@@ -15,7 +15,7 @@ import {
 	BsTwitter,
 } from "react-icons/bs";
 
-export default function FooterComponent() {
+export default function FooterCompo() {
 	return (
 		<Footer container className="mt-[100px]">
 			<div className="w-full">

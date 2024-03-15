@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import "./App.css";
-import CardComponent from "./components/Main/CardComponent";
-import NavbarComponent from "./components/Head/NavbarComponent";
-import FooterComponent from "./components/Footer/FooterComponent";
 import { Spinner } from "flowbite-react";
 import { Button, Modal } from "flowbite-react";
-import FormCreateComponent from "./components/Main/FormCreateComponent";
-import CarouselComponent from "./components/Head/CarouselComponent";
+import NavbarCompo from "./components/Head/NavbarComponent";
+import CarouselCompo from "./components/Head/CarouselComponent";
+import CardCompo from "./components/Main/CardComponent";
+import FormCreateCompo from "./components/Main/FormCreateComponent";
+import FooterCompo from "./components/Footer/FooterComponent";
+
 
 type Status = "idle" | "loading" | "success" | "error";
 type Product = {
@@ -67,8 +68,8 @@ function App() {
 
 	return (
 		<>
-			<NavbarComponent />
-		<CarouselComponent/>
+			<NavbarCompo />
+		<CarouselCompo/>
 			<main className="grid place-content-center">
 				<h1 className="text-4xl ml-24 mb-[50px]">
 					All Product List
@@ -80,7 +81,7 @@ function App() {
 				</div>
 				<div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 mx-[100px] gap-5">
 					{products.map((product) => (
-						<CardComponent
+						<CardCompo
 							key={product.id}
 							title={product.title}
 							price={product.price}
@@ -96,7 +97,7 @@ function App() {
 					<Modal.Header>Create New Product</Modal.Header>
 <Modal.Body>
   <div className="space-y-6">
-    <FormCreateComponent getDataForm={getDataForm} />
+    <FormCreateCompo getDataForm={getDataForm} />
   </div>
 </Modal.Body>
 					<Modal.Footer>
@@ -111,7 +112,7 @@ function App() {
 					</Modal.Footer>
 				</Modal>
 			</main>
-			<FooterComponent />
+			<FooterCompo />
 		</>
 	);
 }

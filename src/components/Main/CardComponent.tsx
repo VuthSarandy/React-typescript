@@ -6,7 +6,7 @@ type CardComponentProps = {
 	image: string;
 };
 
-export default function CardComponent(props: CardComponentProps) {
+export default function CardCompo(props: CardComponentProps) {
 	return (
 		<Card
 			className="max-w-sm">
